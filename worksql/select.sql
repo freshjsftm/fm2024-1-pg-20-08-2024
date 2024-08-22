@@ -110,3 +110,7 @@ WHERE "firstName" ILIKE '_a%';
 SELECT id, "firstName"
 FROM users
 WHERE "firstName" ILIKE 'v%sa';
+
+
+SELECT id, height
+FROM users;
