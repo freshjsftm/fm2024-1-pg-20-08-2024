@@ -80,3 +80,19 @@ RENAME TO user_tasks;
 
 
 SELECT * FROM user_tasks;
+
+
+
+
+-- додати колонку вага до таблиці users
+-- numeric(4,1)  default (height-1)*100
+--  1.98-1=0.98*100=98  
+
+ALTER TABLE "users"
+ADD COLUMN "weight" numeric(4,1);
+
+UPDATE users
+SET "weight"=("height"-1)*100;
+
+ALTER TABLE "users"
+ALTER COLUMN "weight" SET NOT NULL;
